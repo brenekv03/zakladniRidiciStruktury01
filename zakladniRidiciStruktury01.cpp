@@ -36,7 +36,17 @@ int main()
 		}break;
 		case 'S':
 		{
-
+			cout << "\nZvolili jste si moznost S";
+			int n;
+			cout << "\nZadejte nezaporne cislo: ";
+			cin >> n;
+			int cifernySoucet = 0;
+			while (n>0)
+			{
+				cifernySoucet += n % 10;
+				n /= 10;
+			}
+			cout << "\nCiferny soucet je: " << cifernySoucet;
 		}break;
 		default:
 		{

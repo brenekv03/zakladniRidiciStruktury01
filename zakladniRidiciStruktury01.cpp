@@ -1,9 +1,10 @@
 ﻿#include <iostream>
+#include <ctime>
 using namespace std;
 int main()
 {
 	char volba;
-	srand(time(NULL));
+	srand((unsigned)time(NULL));
 	cout << "\nM-Mocnina\nS-Ciferny soucet\nK-Konec\nZvolte si jednu možnost z menu: ";
 	cin >> volba;
 	while (volba!='K')
@@ -15,8 +16,8 @@ int main()
 			cout << "\nZvolili jste moznost M";
 			double a = 1 + (10 - 1) * (double)rand() / (RAND_MAX + 1);
 			int n = -5 + rand() % (5 - (-5) + 1);
-			n = -3;
-			a = 5;
+			cout << a;
+			cout << n;
 			double mocnina=1;
 			if (n < 0)
 			{

@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <ctime>
+#include<cmath>
 using namespace std;
 int main()
 {
@@ -16,22 +17,19 @@ int main()
 			cout << "\nZvolili jste moznost M";
 			double a = 1 + (10 - 1) * (double)rand() / (RAND_MAX + 1);
 			int n = -5 + rand() % (5 - (-5) + 1);
+			cout << "\n";
 			cout << a;
+			cout << "\n";
 			cout << n;
 			double mocnina=1;
+			int absolutniHodnotaMocniny = abs(n);
+			for (int i = 0; i < absolutniHodnotaMocniny; i++)
+			{
+				mocnina *= a;
+			}
 			if (n < 0)
 			{
-				for (int i = n; n < 0; n++)
-				{
-					mocnina *= 1 / a;
-				}
-			}
-			else 
-			{
-				for (int i = 0; i < n; i++)
-				{
-					mocnina *= a;
-				}
+				mocnina = 1 / mocnina;
 			}
 			cout << "\nMocnina je: " << mocnina;
 		}break;
